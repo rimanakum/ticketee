@@ -1,0 +1,22 @@
+<h2>Ticket list</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+   	<% @ticket.each do |ticket| %>
+      <tr>
+        <td><%= link_to ticket.title, project_ticket_path(ticket.project_id, 
+              ticket.id)%></td>
+        <td><%=ticket.description%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table><br><br>
+
+<%= link_to "New Ticket", new_project_ticket_path(@project) %> <br>
+<%= link_to "Back",projects_path %>

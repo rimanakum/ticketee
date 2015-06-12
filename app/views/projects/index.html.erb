@@ -1,0 +1,21 @@
+<h2>Projects_List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+   	<% @projects.each do |project| %>
+      <tr>
+        <td><%= link_to project.name, project %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<h1> Create Project </h1><br>
+<% admins_only do %>
+  <%= link_to "New Project", new_project_path %>
+<% end %>
