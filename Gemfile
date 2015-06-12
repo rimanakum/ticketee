@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# cancan gem
+gem 'cancan', '~> 1.6.10'
 # password security
 gem 'bcrypt-ruby', '3.1.2' 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
