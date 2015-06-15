@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
   namespace :admin do
-    root :to => "base#index"
-    resources :users
+    root "base#index"
+    resources :users do
+      resources :permissions
+      put "permissions", to: "permissions#set",
+                         as: "set_permissions"
+    end
   end
-
+  
+  delete "/signout", to: "sessions#destroy", as: "signout"
   #get 'users/new'
 
   #get 'users/create'
