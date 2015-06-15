@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # cancan gem
 gem 'cancan', '~> 1.6.10'
+#file upload
+gem 'carrierwave', '0.8.0'
 # password security
 gem 'bcrypt-ruby', '3.1.2' 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
